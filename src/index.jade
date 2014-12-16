@@ -1,0 +1,292 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    title Thinkful FrontEnd Design
+
+    link(href='http://fonts.googleapis.com/css?family=Open+Sans:300,600', rel='stylesheet', type='text/css')
+
+    // build:css styles/styles.css
+    link(rel='stylesheet', type='text/css', href='bower_components/prism/themes/prism-twilight.css')
+    link(rel='stylesheet', type='text/css', href='build/build.css')
+
+
+  body
+
+    article
+      section
+        h1 Thinkful FrontEnd Design
+        h3
+          a(href='emailto:joseph.ortiz@careerbuilder.com') Joseph Ortiz
+
+      section
+        h2 What is Thinkful?
+        h3 e-learning platform that teaches various Tech related courses such as
+        ul
+          li Front End Design
+          li Swift Programming
+          li User Experience
+          li Node.js and more...
+
+      section
+        h1.bold Why Thinkful?
+        ul
+          li Curriculum - Projects and hand-picked content
+          li Community - Slack Chatroom and Google Hangouts
+          li 4 month Program
+          li and...
+
+      section.gif.gif--yoda
+        h2 Mentoring
+        p Weekly one-on-one meeting lasting ~1-2 hours.
+
+
+      section
+        h2 The Front End Web Design Course.
+        ul
+          li HTML,CSS, & UI  for 2 Months.
+          li Javascript & Github for 2 months.
+
+      section
+        h2 Unit 1 HTML & CSS - Goals
+        ul
+          li Structure pages with HTML5 and style them with CSS3
+          ul
+            li Couldn't use bootstrap or other CSS framework.
+            li Write CSS & HTML from scratch.
+            li Semantics - W3 Validation. i.e. SEO & accessibility
+
+      section.gif.gif--no
+        h2 The way I was writing code was not valid.
+
+      section
+        h2 Tips:
+        ul
+          li
+          li
+            a(href="http://caniuse.com/") CanIUse.com
+          li
+            a(href="http://jade-lang.com/") Jade - template engine.
+
+      section  CSS Specificity
+        Want an overall low specificity for code re-use
+        ul
+          li (0,0,0,1) <--element selector
+            pre
+              code.language-css.
+                p {color: red}
+
+          li (0,0,1,0)<--class selector
+            pre
+              code.language-css.
+                .red {color: red}
+      section CSS Specificity - continued
+        ul
+          li (0, 1,0,0)<--ID selector
+            pre
+              code.language-css.
+                #red {color: red}
+
+
+      section CSS Specificity - example
+        ul
+          li (1, 0,0,0)<--in-line selector
+            pre
+              code.language-markup.
+                &lt;p style="color: red;">red&lt;/p>
+          ul
+            li
+              a(href="http://www.smashingmagazine.com/2007/07/27/css-specificity-things-you-should-know/") Link
+            li
+              a(href="http://www.smashingmagazine.com/images/css-specificity/specificity-wars.jpg") Example
+
+      section
+        h2 Code our styles with pre-processors instead of direct CSS changes.
+
+      section.gif.gif--less-code
+        h3.bold  Pre-processors like SASS, Less, or Stylus means writing less CSS code AND the ability to write your css more expressively.
+        h3.bold
+          ul
+            li
+            li Variables
+            li Nesting
+            li Importing
+
+
+      section
+        h5 Variables
+        .p -CSS
+        pre
+          code.language-css.
+            body {
+              font: 100% Helvetica, sans-serif;
+              color: #333;
+            }
+
+      section - SASS
+        pre
+          code.language-css.
+            $font-stack:    Helvetica, sans-serif;
+            $primary-color: #333;
+
+            body {
+              font: 100% $font-stack;
+              color: $primary-color;
+            }
+
+      section
+        ul
+          li Nesting - CSS
+            pre
+              code.language-css.
+                nav ul {
+                  margin: 0;
+                  padding: 0;
+                  list-style: none;
+                }
+
+                nav li {
+                  display: inline-block;
+                }
+                nav a {text-decoration: none;}
+      section
+        ul
+          li Nesting - SASS
+            pre
+              code.language-css.
+                nav {
+                  ul {
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                  }
+                  li { display: inline-block; }
+                  a {text-decoration: none; }
+                }
+
+      section HTML & CSS continued
+      ul
+
+        li
+        li Build static websites and apply principles of UX Design
+          p Static websites using gh-pages
+
+      section  HTML & CSS continued
+        ul
+          h2 UI
+          li
+          li Wireframe and sketching - lo-fi designs
+          li hierarchy: must-haves and nice-to-haves
+          li Proximity: clarity and reduce friction.
+          li Typography - fonts set the tone
+            a(href="http://www.fontsquirrel.com/")    FontSquirrel
+      section
+        ul
+          h2 User Experience
+          p how they feel when interacting with they system.
+          li
+          li Prototyping
+            a(href="https://froont.com/")    Froont.com
+          li User Testing
+            a(href="http://peek.usertesting.com")   Peek.usertesting.com
+          li
+            a(href="http://mandrillapp.com/track/click/9362501/peek.usertesting.com?p=eyJzIjoiMUdiMEVhbUFUZ2pqeUVaQ1hwTmNGTzNHOC1VIiwidiI6MSwicCI6IntcInVcIjo5MzYyNTAxLFwidlwiOjEsXCJ1cmxcIjpcImh0dHA6XFxcL1xcXC9wZWVrLnVzZXJ0ZXN0aW5nLmNvbVxcXC9yZXN1bHRcXFwvNTgyNjc4NTE3NTc5Nj9oPTIzODI1OTIwNTE3MDAmYXV0b3BsYXk9dHJ1ZVwiLFwiaWRcIjpcImUzOWM0ZWRmMTg0MDRhYTg5NjE4NGQ0MTNhYWQ3YzQwXCIsXCJ1cmxfaWRzXCI6W1wiMTIyMGQyODM4MGI2YzQwMTk3YWU2YjUwZTE1ZjAzNDk4NjhlYjZiYVwiXX0ifQ")  example
+
+
+
+      section
+        ul Development Tools
+
+          li
+          li Chrome -Remote Debugging
+          li Chrome -Sourcemaps
+      section
+          ul
+            .bold Gulp & Grunt - automation
+            li
+            li similar what BundleConfig in .NET MVC
+            li Execute JS linting, preprocessing, unit testing in real time.
+            li
+              pre
+                code.language-javascript.
+                  gulp.task('images', ['clean:images'], function() {
+                    return gulp.src('src/images/**/*')
+                      .pipe(gulp.dest('dist/images'))
+                      .pipe(connect.reload());
+                  });
+      section
+        h3
+          ul
+            .bold Scaffolding Tools
+            li
+            li
+              a(href="http://yeoman.io/") Yeoman
+             recipes for web projects - lego pieces.
+
+      section.gif.gif--tools-happy
+        h2 all these tools!
+
+      section Unit 2 Javascript & Github
+        ul
+          li
+
+            ul
+              .bold Learn to use Version Control
+              li
+              li
+                a(href="https://pages.github.com/") gh-pages- Host static pages on github
+          pre.language-bash
+            code.
+              $ git checkout -b gh-pages // go to the gh-pages branch or create one.
+              $ git rebase master // bring gh-pages up to date with master
+              $ git push origin gh-pages // commit the changes
+              $ git checkout master // return to the master branch
+      section
+        h2 Javascript
+        ul
+          li Learn to use/navigate the DOM
+          li Use jQuery to traverse/manipulate the DOM.
+          li Object oriented Javascript.
+          li Use of AJAX calls and interacting with API's.
+      section
+        ul
+          h2 Project
+          li
+          li
+            a(href="http://joseph-ortiz.github.io/Archi-tech/") First project
+          li
+            a(href="http://joseph-ortiz.github.io/hot-or-cold-starter/") Hot or Cold game
+          li
+            a(href="http://joseph-ortiz.github.io/jquery-streetfighter-starter/main.html") Street Figher
+          li
+            a(href="http://joseph-ortiz.github.io/shopping-list/") Shopping List app
+          li
+            a(href="http://joseph-ortiz.github.io/fizz-buzz/") FizzBuzz
+          li
+            a(href="http://joseph-ortiz.github.io/places-quiz/") Quiz App
+          li
+            a(href="http://joseph-ortiz.github.io/stackerAJAX/") Stackoverflow API
+          li
+            a(href="joseph-ortiz.github.io/WhereAreTheEvents/") Events App
+          li
+            a(href="joseph-ortiz.github.io") Portfolio Site
+          li Testing
+            a(href="https://github.com/joseph-ortiz/hot-or-cold-starter/blob/master/spec/test.js")    Karma - Hot Or Cold testing
+
+      section.gif.gif--future
+        h3
+        ul.bold
+          h2 But how can we use this in the future?
+          li
+          li lo-fidelity design and prototyping to get the idea out.
+          li rapid prototype tools like FROONT.com - no code design.
+          li use of Javascript testing frameworks such as Karma is suppored by Visual Studio.
+          li SASS to make writing CSS in a more maintainable way.
+          li gh-pages is available for static pages on our Corporate Github REPO.
+
+      section.gif.gif--well-done
+        h1 Thank you!
+        h2 Joseph Ortiz
+
+    script(src='build/build.js')
