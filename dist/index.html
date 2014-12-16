@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Thinkful FrontEnd Design</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,600" rel="stylesheet" type="text/css">
+    <!-- build:css styles/styles.css-->
+    <link rel="stylesheet" type="text/css" href="bower_components/prism/themes/prism-twilight.css">
+    <link rel="stylesheet" type="text/css" href="build/build.css">
+  </head>
+  <body>
+    <article>
+      <section>
+        <h1>Thinkful FrontEnd Design</h1>
+        <h3><a href="emailto:joseph.ortiz@careerbuilder.com">Joseph Ortiz</a></h3>
+      </section>
+      <section>
+        <h2>What is Thinkful?</h2>
+        <h3>e-learning platform that teaches various Tech related courses such as</h3>
+        <ul>
+          <li>Front End Design</li>
+          <li>Swift Programming</li>
+          <li>User Experience</li>
+          <li>Node.js and more...</li>
+        </ul>
+      </section>
+      <section>
+        <h1 class="bold">Why Thinkful?</h1>
+        <ul>
+          <li>Curriculum - Projects and hand-picked content</li>
+          <li>Community - Slack Chatroom and Google Hangouts</li>
+          <li>4 month Program</li>
+          <li>and...</li>
+        </ul>
+      </section>
+      <section class="gif gif--yoda">
+        <h2>Mentoring</h2>
+        <p>Weekly one-on-one meeting lasting ~1-2 hours.</p>
+      </section>
+      <section>
+        <h2>The Front End Web Design Course.</h2>
+        <ul>
+          <li>HTML,CSS, & UI  for 2 Months.</li>
+          <li>Javascript & Github for 2 months.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Unit 1 HTML & CSS - Goals</h2>
+        <ul>
+          <li>Structure pages with HTML5 and style them with CSS3</li>
+          <ul>
+            <li>Couldn't use bootstrap or other CSS framework.</li>
+            <li>Write CSS & HTML from scratch.</li>
+            <li>Semantics - W3 Validation. i.e. SEO & accessibility</li>
+          </ul>
+        </ul>
+      </section>
+      <section class="gif gif--no">
+        <h2>The way I was writing code was not valid.</h2>
+      </section>
+      <section>
+        <h2>Tips:</h2>
+        <ul>
+          <li></li>
+          <li><a href="http://caniuse.com/">CanIUse.com</a></li>
+          <li><a href="http://jade-lang.com/">Jade - template engine.</a></li>
+        </ul>
+      </section>
+      <section> CSS Specificity
+        <Want>an overall low specificity for code re-use</Want>
+        <ul>
+          <li>(0,0,0,1) <--element selector
+            <pre><code class="language-css">p {color: red}
+</code></pre>
+          </li>
+          <li>(0,0,1,0)<--class selector
+            <pre><code class="language-css">.red {color: red}</code></pre>
+          </li>
+        </ul>
+      </section>
+      <section>CSS Specificity - continued
+        <ul>
+          <li>(0, 1,0,0)<--ID selector
+            <pre><code class="language-css">#red {color: red}
+
+</code></pre>
+          </li>
+        </ul>
+      </section>
+      <section>CSS Specificity - example
+        <ul>
+          <li>(1, 0,0,0)<--in-line selector
+            <pre><code class="language-markup">&lt;p style="color: red;">red&lt;/p></code></pre>
+          </li>
+          <ul>
+            <li><a href="http://www.smashingmagazine.com/2007/07/27/css-specificity-things-you-should-know/">Link</a></li>
+            <li><a href="http://www.smashingmagazine.com/images/css-specificity/specificity-wars.jpg">Example</a></li>
+          </ul>
+        </ul>
+      </section>
+      <section>
+        <h2>Code our styles with pre-processors instead of direct CSS changes.</h2>
+      </section>
+      <section class="gif gif--less-code">
+        <h3 class="bold"> Pre-processors like SASS, Less, or Stylus means writing less CSS code AND the ability to write your css more expressively.</h3>
+        <h3 class="bold">
+          <ul>
+            <li></li>
+            <li>Variables</li>
+            <li>Nesting</li>
+            <li>Importing</li>
+          </ul>
+        </h3>
+      </section>
+      <section>
+        <h5>Variables</h5>
+        <div class="p">-CSS</div>
+        <pre><code class="language-css">body {
+  font: 100% Helvetica, sans-serif;
+  color: #333;
+}
+</code></pre>
+      </section>
+      <section>- SASS
+        <pre><code class="language-css">$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+</code></pre>
+      </section>
+      <section>
+        <ul>
+          <li>Nesting - CSS
+            <pre><code class="language-css">nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+}
+nav a {text-decoration: none;}</code></pre>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <ul>
+          <li>Nesting - SASS
+            <pre><code class="language-css">nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li { display: inline-block; }
+  a {text-decoration: none; }
+}
+</code></pre>
+          </li>
+        </ul>
+      </section>
+      <section>HTML & CSS continued</section>
+      <ul>
+        <li></li>
+        <li>Build static websites and apply principles of UX Design
+          <p>Static websites using gh-pages</p>
+        </li>
+      </ul>
+      <section> HTML & CSS continued
+        <ul>
+          <h2>UI</h2>
+          <li></li>
+          <li>Wireframe and sketching - lo-fi designs</li>
+          <li>hierarchy: must-haves and nice-to-haves</li>
+          <li>Proximity: clarity and reduce friction.</li>
+          <li>Typography - fonts set the tone<a href="http://www.fontsquirrel.com/">   FontSquirrel</a></li>
+        </ul>
+      </section>
+      <section>
+        <ul>
+          <h2>User Experience</h2>
+          <p>how they feel when interacting with they system.</p>
+          <li></li>
+          <li>Prototyping<a href="https://froont.com/">   Froont.com</a></li>
+          <li>User Testing<a href="http://peek.usertesting.com">  Peek.usertesting.com</a></li>
+          <li><a href="http://mandrillapp.com/track/click/9362501/peek.usertesting.com?p=eyJzIjoiMUdiMEVhbUFUZ2pqeUVaQ1hwTmNGTzNHOC1VIiwidiI6MSwicCI6IntcInVcIjo5MzYyNTAxLFwidlwiOjEsXCJ1cmxcIjpcImh0dHA6XFxcL1xcXC9wZWVrLnVzZXJ0ZXN0aW5nLmNvbVxcXC9yZXN1bHRcXFwvNTgyNjc4NTE3NTc5Nj9oPTIzODI1OTIwNTE3MDAmYXV0b3BsYXk9dHJ1ZVwiLFwiaWRcIjpcImUzOWM0ZWRmMTg0MDRhYTg5NjE4NGQ0MTNhYWQ3YzQwXCIsXCJ1cmxfaWRzXCI6W1wiMTIyMGQyODM4MGI2YzQwMTk3YWU2YjUwZTE1ZjAzNDk4NjhlYjZiYVwiXX0ifQ"> example</a></li>
+        </ul>
+      </section>
+      <section>
+        <ul>Development Tools
+          <li></li>
+          <li>Chrome -Remote Debugging</li>
+          <li>Chrome -Sourcemaps</li>
+        </ul>
+      </section>
+      <section>
+        <ul>
+          <div class="bold">Gulp & Grunt - automation</div>
+          <li></li>
+          <li>similar what BundleConfig in .NET MVC</li>
+          <li>Execute JS linting, preprocessing, unit testing in real time.</li>
+          <li>
+            <pre><code class="language-javascript">gulp.task('images', ['clean:images'], function() {
+  return gulp.src('src/images/**/*')
+    .pipe(gulp.dest('dist/images'))
+    .pipe(connect.reload());
+});</code></pre>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3>
+          <ul>
+            <div class="bold">Scaffolding Tools</div>
+            <li></li>
+            <li><a href="http://yeoman.io/">Yeoman</a></li>
+            <recipes>for web projects - lego pieces.</recipes>
+          </ul>
+        </h3>
+      </section>
+      <section class="gif gif--tools-happy">
+        <h2>all these tools!</h2>
+      </section>
+      <section>Unit 2 Javascript & Github
+        <ul>
+          <li>
+            <ul>
+              <div class="bold">Learn to use Version Control</div>
+              <li></li>
+              <li><a href="https://pages.github.com/">gh-pages- Host static pages on github</a></li>
+            </ul>
+          </li>
+          <pre class="language-bash"><code>$ git checkout -b gh-pages // go to the gh-pages branch or create one.
+$ git rebase master // bring gh-pages up to date with master
+$ git push origin gh-pages // commit the changes
+$ git checkout master // return to the master branch</code></pre>
+        </ul>
+      </section>
+      <section>
+        <h2>Javascript</h2>
+        <ul>
+          <li>Learn to use/navigate the DOM</li>
+          <li>Use jQuery to traverse/manipulate the DOM.</li>
+          <li>Object oriented Javascript.</li>
+          <li>Use of AJAX calls and interacting with API's.</li>
+        </ul>
+      </section>
+      <section>
+        <ul>
+          <h2>Project</h2>
+          <li></li>
+          <li><a href="http://joseph-ortiz.github.io/Archi-tech/">First project</a></li>
+          <li><a href="http://joseph-ortiz.github.io/hot-or-cold-starter/">Hot or Cold game</a></li>
+          <li><a href="http://joseph-ortiz.github.io/jquery-streetfighter-starter/main.html">Street Figher</a></li>
+          <li><a href="http://joseph-ortiz.github.io/shopping-list/">Shopping List app</a></li>
+          <li><a href="http://joseph-ortiz.github.io/fizz-buzz/">FizzBuzz</a></li>
+          <li><a href="http://joseph-ortiz.github.io/places-quiz/">Quiz App</a></li>
+          <li><a href="http://joseph-ortiz.github.io/stackerAJAX/">Stackoverflow API</a></li>
+          <li><a href="joseph-ortiz.github.io/WhereAreTheEvents/">Events App</a></li>
+          <li><a href="joseph-ortiz.github.io">Portfolio Site</a></li>
+          <li>Testing<a href="https://github.com/joseph-ortiz/hot-or-cold-starter/blob/master/spec/test.js">   Karma - Hot Or Cold testing</a></li>
+        </ul>
+      </section>
+      <section class="gif gif--future">
+        <h3></h3>
+        <ul class="bold">
+          <h2>But how can we use this in the future?</h2>
+          <li></li>
+          <li>lo-fidelity design and prototyping to get the idea out.</li>
+          <li>rapid prototype tools like FROONT.com - no code design.</li>
+          <li>use of Javascript testing frameworks such as Karma is suppored by Visual Studio.</li>
+          <li>SASS to make writing CSS in a more maintainable way.</li>
+          <li>gh-pages is available for static pages on our Corporate Github REPO.</li>
+        </ul>
+      </section>
+      <section class="gif gif--well-done">
+        <h1>Thank you!</h1>
+        <h2>Joseph Ortiz</h2>
+      </section>
+    </article>
+    <script src="build/build.js"></script>
+  </body>
+</html>
